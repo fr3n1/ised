@@ -32,7 +32,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel" >
             <a class="navbar-brand" href="#">
 
-                     <img src="https://i.imgur.com/oFwLC97.png" width="200"  alt="">
+                     <img src="storage/A.png" width="200"  alt="">
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -79,8 +79,8 @@
         </nav>
        
        
-  <div class="col-5" style="margin-left:600px "> <img src="storage/I.png" class="float-right" alt="Paris"  width="400" height="200"> </div>
-  <div class="col-5" style="margin-left:520px "> <img src="storage/L.png" class="float-right" alt="Paris"  width="250" height="100"> </div>
+  <div class="col-5" style="margin-left:500px "> <img src="storage/I.png" class="float-right" alt="Paris"  width="400" height="200"> </div>
+  <div class="col-5" style="margin-left:500px "> <img src="storage/L.png" class="float-right" alt="Paris"  width="250" height="100"> </div>
   
    
 
@@ -90,5 +90,29 @@
             @yield('content')
         </main>
     </div>
+
+    </div>
+
+<footer id ="footer">
+    <div class="m-all t-all d-all bot-footer cf">
+        <div class="wrap cf">
+            <div class="m-1of2 t-1of2 d-1of2">
+                <p class="source-org copyright">
+                    Copyright © 2019 Universidade Anhembi Morumbi.
+                    Todos os direitos Reservados. <a href="http://portal.anhembi.br/wp-content/uploads/2018/10/Universidade-Anhembi-Morumbi_Privacy-Policy.pdf" target="_blank">Política de Privacidade</a>
+                </p>
+            </div>
+                <div class="m-1of2 t-1of2 d-1of2">
+                    <div class="logo-footer-laureate">
+
+                        <a href="http://www.laureate.net/" target="_blank"><img src="https://portal.anhembi.br/wp-content/themes/anhembi/library/images/logo-laureate.png" width="235px" height="66px" alt="Laureate - International Universities" title="Laureate - International Universities" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+</footer>
+
 </body>
 </html>
