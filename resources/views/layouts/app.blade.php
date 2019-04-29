@@ -22,10 +22,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
      <style>
      html, body {
         background-color: #00AD8E;
-        </style>
+     }</style>
 </head>
 <body>
 <div id="app">
@@ -92,25 +93,21 @@
     </div>
 
     </div>
-
-<footer id ="footer">
-    <div class="m-all t-all d-all bot-footer cf">
-        <div class="wrap cf">
-            <div class="m-1of2 t-1of2 d-1of2">
+      
+<footer id ="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 footerLeft">
                 <p class="source-org copyright">
                     Copyright © 2019 Universidade Anhembi Morumbi.
-                    Todos os direitos Reservados. <a href="http://portal.anhembi.br/wp-content/uploads/2018/10/Universidade-Anhembi-Morumbi_Privacy-Policy.pdf" target="_blank">Política de Privacidade</a>
+                    Todos os direitos Reservados.
                 </p>
             </div>
-                <div class="m-1of2 t-1of2 d-1of2">
-                    <div class="logo-footer-laureate">
-
-                        <a href="http://www.laureate.net/" target="_blank"><img src="https://portal.anhembi.br/wp-content/themes/anhembi/library/images/logo-laureate.png" width="235px" height="66px" alt="Laureate - International Universities" title="Laureate - International Universities" />
-                        </a>
-                    </div>
-                </div>
+            <div class="col-md-4 footerRight">
+                <a href="http://www.laureate.net/" target="_blank"><img src="https://portal.anhembi.br/wp-content/themes/anhembi/library/images/logo-laureate.png" width="235px" height="66px" alt="Laureate - International Universities" title="Laureate - International Universities" />
+                </a>
             </div>
-         </div>
+        </div>
     </div>
 </footer>
 
