@@ -1,16 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
     <div class="row ">
-        <div class="col-lg-5" style="margin-top: 100px; ">
+    	 <div class="col-5" style="margin-left: 110px" > <img src="storage/uam.png" class="float-left" alt="Paris"  width="350" height="80"> </div> 
+        <div class="col-lg-7" style="margin-top: 50px; margin-left: 120px" >
+
          <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
+                          
                             <label for="email" >{{ __('E-Mail') }}</label>
 
-                           
+                                
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="@anhembimorumbi.edu.br" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -36,21 +39,25 @@
                             
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row "  height="200">
                             
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
+                                <button class="button" type="submit" class="btn btn-primary" style="background-color:#8FC62C; margin-right: 10px">Estudante</button>
+                                <button type="button" class="btn btn-primary" style="background-color:#8FC62C; margin-right: 10px">Professor</button>
+                                <button type="button" class="btn btn-primary" style="background-color:#8FC62C">Coordenador</button>
                                 @if (Route::has('password.request'))
                                     
                                 @endif
                             
                         </div>
+                       
                     </form>
+
+  
+
                 
          </div>
         
     </div>
-</div>
+
+
 @endsection
