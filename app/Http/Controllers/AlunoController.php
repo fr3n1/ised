@@ -10,7 +10,7 @@ class AlunoController extends Controller
     public function questionarioGraduação()
     {
 
-        $perguntas = DB::table('perguntasGrad')
+        $perguntas = DB::table('perguntas')
                 ->orderBy('ordem', 'desc')
                 ->get();
 
@@ -36,7 +36,7 @@ class AlunoController extends Controller
             array(
                 'texto' => $resposta->texto, 
                 'comentario' => $resposta->comentario, 
-                'fk_pergunta' => $resposta->fk_pergunta
+                'fk_pergunta' => $resposta->fk_pergunta,
                 'finished' => $resposta->userId
                 )
         );
