@@ -14,3 +14,7 @@
 Auth::routes();
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/export', 'MyController@export')->name('export');
+Route::get('/importExportView', 'CoordenadorController@importExportView');
+Route::post('/import', 'CoordenadorController@import')->name('import');
