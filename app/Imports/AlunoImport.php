@@ -16,7 +16,7 @@ class AlunoImport implements ToModel, WithChunkReading
     */
     public function model(array $row)
     {
-        if (!isset($row[0])) {
+        if (!isset($row[13])) {
             return null;
         }
 

@@ -24,7 +24,9 @@ class CoordenadorController extends Controller
     public function import() 
     {
         Excel::import(new AlunoImport,request()->file('file'));
-           
+        
+        //Excel::import(new UserImport,request()->file('file'));
+
         return back();
     }
 
