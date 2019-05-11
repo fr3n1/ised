@@ -19,7 +19,7 @@ class CreateResults extends Migration
             $table->string('texto');
             $table->string('comentario');
             $table->string('finished');
-            $table->foreign('fk_pergunta')->references('id')->on('pergunta');
+          //  $table->foreign('fk_pergunta')->references('id')->on('pergunta');
         });
     }
 

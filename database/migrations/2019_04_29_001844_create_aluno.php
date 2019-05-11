@@ -14,9 +14,8 @@ class CreateAluno extends Migration
     public function up()
     {
         Schema::create('aluno', function (Blueprint $table) {
-            Schema::create('alunos', function (Blueprint $table) {
-                $table->increments('id'); 
-                $table->unsignedInteger('user_id')->nullable(false);
+            $table->increments('id'); 
+                //$table->unsignedInteger('user_id')->nullable(false);
                 $table->integer('status')->default(1)->nullable(false);
                 $table->timestamps();
                 $table->string('PACOTE');           // liga ao professor em bloco
@@ -31,8 +30,8 @@ class CreateAluno extends Migration
                 $table->string('NOME');             // nome do aluno 
                 $table->string('RA');               // RA
     
-                $table->foreign('user_id', 'fk_user')->references('id')->on('users');
-            });
+                //$table->foreign('user_id', 'fk_user')->references('id')->on('users');
+        //
         });
     }
 
