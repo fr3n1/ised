@@ -16,25 +16,12 @@ class ProfessorImport implements ToModel,WithChunkReading
     public function model(array $row)
     {
         return new Professor([
-            'CAMPUS'     => $row[1],
             'NOME'    => $row[3], 
-            'DISCIPLINA'    => $row[9],
-            'TURMA'    => $row[10], 
-            'BLOCO'    => $row[11],
-            'Mnemônio'    => $row[12], 
-            'Curso'    => $row[12], 
-
-            //
         ]);
     }
 
     public function chunkSize(): int
     {
-  return 500;
-
-
-
-
-
+        return 500;
     }
 }

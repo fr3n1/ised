@@ -10,19 +10,20 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class CoordenadorController extends Controller
 {
+    public function LoadAluno()
+    {
+        
+        
+        
+    }
 
-    /**
-    * @return \Illuminate\Support\Collection
-    */
-    public function importExportView()
+
+    public function AlunoimportExportView()
     {
        return view('import');
     }
 
-    /**
-    * @return \Illuminate\Support\Collection
-    */
-    public function import() 
+    public function Alunoimport() 
     {
         Excel::import(new AlunoImport,request()->file('file'));
         
@@ -31,22 +32,19 @@ class CoordenadorController extends Controller
         return back();
     }
 
-    public function LoadAluno()
-    {
-        
-        
-        
-    }
-    public function Professorimportview()
+
+    public function Horarioimportview()
     {
        return view('import');
     }
-   public function Professorimport() 
+   public function Horarioimport() 
     {
-        Excel::import(new ProfessorImport,request()->file('file'));
+        Excel::import(new HorarioImport,request()->file('file'));
            
         return back();
     }
+
+
     public function Userimportview()
     {
        return view('import');
