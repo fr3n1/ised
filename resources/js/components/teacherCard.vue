@@ -1,17 +1,13 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
+    <a href="#" class="stretched-link">
+        <div class="card mx-auto mt-5" style="width:300px">
+            <img class="card-img-top" src="storage/professorAvatar1.png" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">Prof. Antônio Pereira dos Santos</h4>
+                <p class="card-text">Técnicas de Programação</p>
             </div>
         </div>
-    </div>
+    </a>
 </template>
 
 <script>

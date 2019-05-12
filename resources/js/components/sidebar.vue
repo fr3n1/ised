@@ -1,16 +1,11 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
+    <div class="sidenav">
+        <a href="#" class="stretched-link">
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width:100%">100%</div>
             </div>
-        </div>
+        </a>
+        <teacher-card></teacher-card>
     </div>
 </template>
 
