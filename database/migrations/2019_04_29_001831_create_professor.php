@@ -21,9 +21,10 @@ class CreateProfessor extends Migration
                 $table->string('NOME');          // NOME
                 $table->string('DISCIPLINA');    // DISCIPLINA
                 $table->string('TURMA');         // TURMA
-                $table->string('BLOCO');         // relacionado com aluno, campo pacote
-                $table->string('Mnemônio');      // id co durso
-                $table->string('Curso');         // Curso
+                $table->string('BLOCO')->nullable();         // relacionado com aluno, campo pacote
+                $table->string('Mnemônio')->nullable();        // id co durso
+                $table->string('Curso')->nullable();           // Curso
+            
         });
     }
 

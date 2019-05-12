@@ -1182,6 +1182,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/e1816f793c6abd33e3858ecb3b056da9a7dd5d73",
                 "reference": "e1816f793c6abd33e3858ecb3b056da9a7dd5d73",
+
                 "shasum": ""
             },
             "require": {

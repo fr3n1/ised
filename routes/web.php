@@ -14,7 +14,13 @@
 Auth::routes();
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/questionario', 'QuestionarioController');
 
-Route::get('/export', 'MyController@export')->name('export');
-Route::get('/importExportView', 'CoordenadorController@importExportView');
-Route::post('/import', 'CoordenadorController@import')->name('import');
+Route::get('/exportAluno', 'MyController@export')->name('export');
+Route::get('/importExportViewAluno', 'CoordenadorController@importExportView');
+Route::post('/importAluno', 'CoordenadorController@import')->name('import');
+
+
+Route::get('/exportProfessor', 'CoordenadorController@export')->name('export');
+Route::get('/importExportViewProfessor', 'CoordenadorController@Professorimportview');
+Route::post('/importProfessor', 'CoordenadorController@Professorimport')->name('import');
