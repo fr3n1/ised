@@ -5,8 +5,10 @@
                 <div class="card">
                     <div class="card-header">Example Component</div>
 
-                    <div class="card-body">
-                        I'm an example component.
+                    <div class="card-body" >
+                        <form method="get" action="/api/test">
+                            <button type="submit">sexo</button>
+                        </form>
                     </div>
                 </div>
             </div>
