@@ -41,9 +41,15 @@
 
 </head>
 <body>
-
+<div id="app">
 <div class="w3-light-grey">
 <div class="w3-container w3-green w3-center" style="width:25%"></div>
+</div><br>
+
+        <main class="py-4">
+            @yield('content')
+        </main>
+    </div>
 </div><br>
 
 </body>

@@ -4,8 +4,10 @@ namespace App\Imports;
 
 use App\Aluno;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithChunkReading;
 use Carbon\Carbon;
-class AlunoImport implements ToModel
+
+class AlunoImport implements ToModel, WithChunkReading
 {
     /**
     * @param array $row
@@ -14,11 +16,12 @@ class AlunoImport implements ToModel
     */
     public function model(array $row)
     {
+        if (!isset($row[13])) {
+            return null;
+        }
+
         return new Aluno([
             'PACOTE'   => $row[0],
-            'created_at'   => Carbon::now()->timestamp,
-            'updated_at'   => Carbon::now()->timestamp,
-            'user_id'  => 2323,
             'COD_TIPO_CURSO'  => $row[2], 
             'COD_CURSO'  => $row[4],
             'CURSO'  => $row[5],
@@ -30,4 +33,10 @@ class AlunoImport implements ToModel
             'RA'  => $row[14],
         ]);
     }
+
+    public function chunkSize(): int
+    {
+        return 500;
+    }
+    
 }
