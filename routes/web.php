@@ -16,11 +16,14 @@ Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/questionario', 'QuestionarioController');
 
-Route::get('/exportAluno', 'MyController@export')->name('export');
-Route::get('/import', 'CoordenadorController@alunoImportExportView');
-Route::post('/importAluno', 'CoordenadorController@alunoImport')->name('import');
+Route::get('/import', 'CoordenadorController@importView');
+Route::post('/importAluno', 'CoordenadorController@alunoImport')->name('importAluno');
+Route::post('/importHorario', 'CoordenadorController@horarioImport')->name('importHorario');
 
-
-Route::get('/exportProfessor', 'CoordenadorController@export')->name('export');
-Route::get('/importExportViewProfessor', 'CoordenadorController@Professorimportview');
-Route::post('/importProfessor', 'CoordenadorController@Professorimport')->name('import');
+//Route::view('/', 'welcome');
+//Auth::routes();
+//Route::get('/home', 'HomeController@index')    
+//    ->name('home');
+//Route::get('/admin', 'AdminController@admin')    
+//    ->middleware('is_admin')    
+//    ->name('admin');

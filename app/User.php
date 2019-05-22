@@ -10,7 +10,13 @@ use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    const ADMIN_TYPE = 'coordenador';
+    const DEFAULT_TYPE = 'default';
+
+    public function isAdmin()    {        
+        return $this->type === self::ADMIN_TYPE;    
+    }
+
     use HasApiTokens, Notifiable;
     /**
      * The attributes that are mass assignable.
