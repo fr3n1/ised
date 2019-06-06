@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+ 
 Route::middleware('auth:api')->post('/questions', 'QuestionarioApiController@getQuestions');
 Route::middleware('auth:api')->post('/questions/send', 'QuestionarioApiController@postResponse');
 Route::middleware('auth:api')->get('/teachers', 'QuestionarioApiController@getTeachers');
