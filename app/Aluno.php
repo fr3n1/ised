@@ -27,7 +27,7 @@ class Aluno extends Model
     /**
      * Relationship
      */
-    public function horarios(){
-        return $this->belongsTo(horario::class, 'PACOTE', 'BLOCO');
-    }
+    //public function horarios(){
+    //    return $this->belongsTo(horario::class, 'PACOTE', 'BLOCO');
+    //}
 }

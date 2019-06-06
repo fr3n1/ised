@@ -16,13 +16,12 @@ class CreateHorariosTable extends Migration
         Schema::create('horarios', function (Blueprint $table) {
             $table->increments('id'); // ID
             $table->timestamps();
-            //$table->string('PERIODO_LETIVO');// PERIODO_LETIVO
+            $table->string('prof_ID');// PERIODO_LETIVO
             $table->string('CAMPUS');        // CAMPUS
             $table->string('NOME');          // NOME
             $table->string('DISCIPLINA');    // DISCIPLINA
             $table->string('TURMA');         // TURMA
             $table->string('BLOCO')->nullable();         // relacionado com aluno, campo pacote
-            $table->string('Mnemônio')->nullable();        // id co durso
             $table->string('Curso')->nullable();           // Curso
         });
     }

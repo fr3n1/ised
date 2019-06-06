@@ -1807,7 +1807,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get("/api/teachers").then(function (response) {
-        // this.professores = response.data;
+        _this.professores = response.data;
         console.log(_this.professores);
       })["catch"](function (error) {
         console.log(error);
@@ -2158,7 +2158,7 @@ __webpack_require__.r(__webpack_exports__);
 
       console.log(this.value.tipo);
       axios.post("/api/questions", {
-        tipo: this.value.tipo
+        tipo: "Professor"
       }).then(function (response) {
         _this.questions = response.data;
       });
@@ -2169,8 +2169,7 @@ __webpack_require__.r(__webpack_exports__);
         user_id: 12,
         evaluated_id: this.value.id,
         id_pergunta: perguntaId
-      }).then(function (response) {});
-      this.color = "angry_active";
+      }).then(function (response) {}); //this.color = "angry_active"
     }
   },
   mounted: function mounted() {
@@ -6755,7 +6754,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.angry_active {\n  color :red\n}\n.frown_active {\n  color: yellow\n}\n.meh_active {\n  color: rgb(117, 114, 114)\n}\n.smile_active {\n  color: blue\n}\n.grin_active {\n  color:green\n}\n", ""]);
+exports.push([module.i, "\n.angry_active {\r\n  color :red\n}\n.frown_active {\r\n  color: yellow\n}\n.meh_active {\r\n  color: rgb(117, 114, 114)\n}\n.smile_active {\r\n  color: blue\n}\n.grin_active {\r\n  color:green\n}\r\n", ""]);
 
 // exports
 

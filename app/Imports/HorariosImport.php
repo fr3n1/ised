@@ -21,9 +21,8 @@ class HorariosImport implements ToModel, WithHeadingRow
             'DISCIPLINA'    => $row['disciplina'],
             'TURMA'    => $row['turma'], 
             'BLOCO'    => $row['bloco'],
-            'Mnemônio'    => $row['mnemonio'], 
             'Curso'    => $row['curso'], 
-
+            'prof_ID'    => $row['ID'], 
         ]);
     }
 }

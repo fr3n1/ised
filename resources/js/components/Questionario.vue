@@ -53,7 +53,7 @@ export default {
   methods: {
     getQuestions() {
       console.log(this.value.tipo);
-      axios.post("/api/questions", { tipo: this.value.tipo }).then(response => {
+      axios.post("/api/questions", { tipo: "Professor" }).then(response => {
         this.questions = response.data;
       });
     },
@@ -65,7 +65,7 @@ export default {
           id_pergunta: perguntaId
         
          }).then(response => {});
-      this.color = "angry_active"
+      //this.color = "angry_active"
     }
   },
   mounted() {

@@ -39,7 +39,7 @@ export default {
     },
     getTeachers() {
       axios.get("/api/teachers").then(response => {
-       // this.professores = response.data;
+       this.professores = response.data;
         console.log(this.professores);
       }).catch(function (error) {
         console.log(error);

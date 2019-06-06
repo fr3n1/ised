@@ -13,7 +13,11 @@ class horario extends Model
             'DISCIPLINA',   // DISCIPLINA
             'TURMA',         // TURMA
             'BLOCO',         // relacionado com aluno, campo pacote
-            'Mnemônio',     // id co durso
             'Curso',         // Curso
+            'prof_ID',         // RA
     ];
+
+    public function aluno(){
+        return $this->belongsTo(Aluno::class, 'BLOCO', 'PACOTE');
+    }
 }

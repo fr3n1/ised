@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use App\Aluno;
+use App\horario;
 use App\pergunta;
 
 class QuestionarioApiController extends Controller
@@ -21,15 +22,13 @@ class QuestionarioApiController extends Controller
 
     public function getTeachers(Request $request)
     {
-        return Aluno::whereHas('horarios', function ($query) {
+        return horario::whereHas('Aluno', function ($query) {
             $query->where(
                 [
-                    
-                    ['aluno.COD_CURSO', '=', 'horarios.Mnemônio'],
-                    //['aluno.DISCIPLINA', '=', 'horarios.DISCIPLINA'],
+                    ['aluno.RA', '=', auth()->user()->getRA()],
                 ]
             );
-        }, '=', auth()->user()->getRA())->get();
+        })->get();
     }
 
     public function postResponse(Request $request)
