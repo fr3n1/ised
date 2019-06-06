@@ -25,7 +25,8 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    
+    protected $redirectTo = '/questionario';
 
     public function id()
     {

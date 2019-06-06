@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\pergunta;
 
 class QuestionarioController extends Controller
 {
@@ -80,10 +81,5 @@ class QuestionarioController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function test()
-    {
-        dd(123);
     }
 }

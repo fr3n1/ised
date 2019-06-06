@@ -14,10 +14,10 @@ class CreateResults extends Migration
     public function up()
     {
         Schema::create('results', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('user_id');
+            $table->integer('evaluated_id');
             $table->timestamps();
-            $table->string('texto');
-            $table->string('comentario');
+            $table->integer('score');
             $table->string('finished');
             $table->string('id_pergunta');
             //$table->foreign('id_pergunta', 'fk_pergunta')->references('id')->on('pergunta');

@@ -5,9 +5,9 @@ namespace App\Imports;
 use App\Aluno;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithChunkReading;
-use Carbon\Carbon;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class AlunoImport implements ToModel, WithChunkReading
+class AlunoImport implements ToModel, WithHeadingRow, WithChunkReading
 {
     /**
     * @param array $row
@@ -16,21 +16,18 @@ class AlunoImport implements ToModel, WithChunkReading
     */
     public function model(array $row)
     {
-        if (!isset($row[13])) {
-            return null;
-        }
 
         return new Aluno([
-            'PACOTE'   => $row[0],
-            'COD_TIPO_CURSO'  => $row[2], 
-            'COD_CURSO'  => $row[4],
-            'CURSO'  => $row[5],
-            'CAMPUS'  => $row[7],
-            'TURMA'  => $row[9],
-            'DISCIPLINA'  => $row[10],
-            'SERIE'  => $row[12],
-            'NOME'  => $row[13],
-            'RA'  => $row[14],
+            'PACOTE'   => $row['pacote'],
+            'COD_TIPO_CURSO'  => $row['cod_tipo_curso'], 
+            'COD_CURSO'  => $row['cod_curso'],
+            'CURSO'  => $row['curso'],
+            'CAMPUS'  => $row['campus'],
+            'TURMA'  => $row['turma'],
+            'DISCIPLINA'  => $row['disciplina'],
+            'SERIE'  => $row['serie'],
+            'NOME'  => $row['nome'],
+            'RA'  => $row['ra'],
         ]);
     }
 
