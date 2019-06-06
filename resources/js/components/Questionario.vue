@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       color: "",
-      icons:[],
+      icons: [],
       questions: []
     };
   },
@@ -61,7 +61,7 @@ export default {
       axios.post("/api/questions/send", { 
           score: score,
           user_id :12, 
-          evaluated_id: this.value.id,
+          evaluated_id: this.value.prof_ID,
           id_pergunta: perguntaId
         
          }).then(response => {});

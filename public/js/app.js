@@ -2167,7 +2167,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.post("/api/questions/send", {
         score: score,
         user_id: 12,
-        evaluated_id: this.value.id,
+        evaluated_id: this.value.prof_ID,
         id_pergunta: perguntaId
       }).then(function (response) {}); //this.color = "angry_active"
     }
